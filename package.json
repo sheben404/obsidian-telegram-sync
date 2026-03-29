@@ -19,7 +19,7 @@
 		"Messages",
 		"Transfer Files"
 	],
-	"author": "soberhacker",
+	"author": "sheben404",
 	"license": "GNU Affero General Public License v3.0",
 	"devDependencies": {
 		"@types/async": "^3.2.18",

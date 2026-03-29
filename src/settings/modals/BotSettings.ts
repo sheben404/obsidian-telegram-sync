@@ -33,7 +33,7 @@ export class BotSettingsModal extends Modal {
 		limBlocks.style.marginLeft = "10px";
 		limBlocks.setText("- Use VPN or proxy to bypass blocks in China, Iran, and limited corporate networks ");
 		limBlocks.createEl("a", {
-			href: "https://github.com/soberhacker/obsidian-telegram-sync/issues/225#issuecomment-1780539957",
+			href: "https://github.com/sheben404/obsidian-telegram-sync/issues/225#issuecomment-1780539957",
 			text: "([ex. config of Clash],",
 		});
 		limBlocks.createEl("a", {
@@ -156,7 +156,7 @@ export class BotSettingsModal extends Modal {
 				});
 			});
 		botTokenSetting.descEl.createEl("a", {
-			href: "https://github.com/soberhacker/obsidian-telegram-sync/blob/main/docs/Bot%20Token%20Encryption.md",
+			href: "https://github.com/sheben404/obsidian-telegram-sync/blob/main/docs/Bot%20Token%20Encryption.md",
 			text: "What does this can prevent?",
 		});
 	}

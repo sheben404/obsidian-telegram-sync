@@ -188,9 +188,15 @@ export class TelegramSyncSettingTab extends PluginSettingTab {
 		privacyPolicyButton.style.color = "LightCoral";
 		privacyPolicyButton.style.textDecoration = "None";
 
-		this.containerEl.createEl("div", { text: "Created by " }).createEl("a", {
-			text: "soberhacker🍃🧘💻",
+		const createdByDiv = this.containerEl.createEl("div", { text: "Originally created by " });
+		createdByDiv.createEl("a", {
+			text: "soberhacker",
 			href: "https://github.com/soberhacker",
+		});
+		createdByDiv.appendText(", maintained by ");
+		createdByDiv.createEl("a", {
+			text: "sheben404",
+			href: "https://github.com/sheben404",
 		});
 
 		this.containerEl.createEl("br");
@@ -293,7 +299,7 @@ export class TelegramSyncSettingTab extends PluginSettingTab {
 
 		// add link to authorized user features
 		userSettings.descEl.createEl("a", {
-			href: "https://github.com/soberhacker/obsidian-telegram-sync/blob/main/docs/Authorized%20User%20Features.md",
+			href: "https://github.com/sheben404/obsidian-telegram-sync/blob/main/docs/Authorized%20User%20Features.md",
 			text: "a few secondary features",
 		});
 	}

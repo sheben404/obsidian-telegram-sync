@@ -45,7 +45,7 @@ export class MessageDistributionRulesModal extends Modal {
 		this.titleEl.setText(`${this.editing ? "Editing" : "Adding"} message distribution rule`);
 		new Setting(this.messageDistributionRulesDiv).descEl.createEl("a", {
 			text: "🗎 User guide",
-			href: "https://github.com/soberhacker/obsidian-telegram-sync/blob/main/docs/Template%20Variables%20List.md",
+			href: "https://github.com/sheben404/obsidian-telegram-sync/blob/main/docs/Template%20Variables%20List.md",
 		});
 	}
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.0.1-fork] (2025-03-29)
+
+> Fork maintained at [sheben404/obsidian-telegram-sync](https://github.com/sheben404/obsidian-telegram-sync)
+
+### Features
+
+- Add proxy URL setting for bot connection
+
+### Bug Fixes
+
+- Ensure media files are embedded with `!` prefix in markdown links
+
+---
+
 ## [4.0.0](https://github.com/soberhacker/obsidian-telegram-sync/compare/3.2.0...4.0.0) (2024-10-30)
 
 

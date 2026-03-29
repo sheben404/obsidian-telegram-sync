@@ -1,24 +1,17 @@
 name: Release Obsidian plugin
 
 on:
-    pull_request_target:
-        types:
-            - closed
-        branches:
-            - main
+    push:
+        tags:
+            - "*"
 
 permissions:
     contents: write
-    pull-requests: write
 
 jobs:
     release:
-        if: ${{ github.event.pull_request.merged == true && github.head_ref == 'develop' && github.event.pull_request.author_association == 'OWNER' }}
         runs-on: ubuntu-latest
         steps:
-            - name: Print github
-              run: echo '${{ toJson(github) }}'
-
             - name: Checkout repository
               uses: actions/checkout@v3
 
@@ -27,16 +20,10 @@ jobs:
               with:
                   node-version: "18.x"
 
-            - name: Build plugin main.js
-              id: build_plugin
+            - name: Build plugin
               run: |
-                  git config core.autocrlf false
-                  git config core.eol lf
                   npm ci
                   npm run build
-
-                  TAG_NAME=$(node -p "require('./package.json').version")
-                  echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
             - name: Create release
               uses: softprops/action-gh-release@v1
@@ -45,16 +32,6 @@ jobs:
                       main.js
                       manifest.json
                       styles.css
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  tag_name: ${{ env.TAG_NAME }}
+                  tag_name: ${{ github.ref_name }}
                   prerelease: false
                   draft: false
-
-            - name: Create and merge pull request from main to develop
-              run: |
-                  if ! gh pr view -B develop -H main; then
-                    gh pr create -B develop -H main --title 'Merge main into develop' --body 'Merge main into develop'
-                  fi
-                  gh pr merge main --rebase --body 'Merge main into develop'
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
