@@ -21,10 +21,9 @@ Transfer messages and files from [Telegram](https://telegram.org/) to your [Obsi
 
 -   [Features](#-features)
 -   [Installation](#-installation)
--   [Manual Installation](#-manual-installation)
 -   [Usage](#-usage)
--   [Supporters & Donations](#-supporters--donations)
 -   [Contributing](#-contributing)
+-   [Credits](#-credits)
 
 ## 🚀 Features
 
@@ -38,15 +37,17 @@ Transfer messages and files from [Telegram](https://telegram.org/) to your [Obsi
 
 ## 📦 Installation
 
-1. Click on [Telegram Sync](https://obsidian.md/plugins?id=telegram-sync) link
-2. Allow to open Obsidian app
-3. Make sure that community plugins is turned on
-4. Click the Install button, then enable the plugin by toggling the switch
+### Via BRAT (recommended)
 
-## 👏 Manual Installation
+1. Install [BRAT](https://github.com/TfTHacker/obsidian42-brat) plugin from Obsidian community plugins
+2. Open BRAT settings, click "Add Beta Plugin"
+3. Enter `sheben404/obsidian-telegram-sync`
+4. BRAT will auto-install and keep the plugin updated
+
+### Manual Installation
 
 1. Download main.js, styles.css, manifest.json from the [latest release](https://github.com/sheben404/obsidian-telegram-sync/releases/latest)
-2. Copy the downloaded files to <path-to-your-vault>/.obsidian/plugins/telegram-sync/
+2. Copy the downloaded files to `<path-to-your-vault>/.obsidian/plugins/telegram-sync/`
 3. Restart Obsidian and enable **Telegram Sync** in the Community plugins tab
 
 ## 📮 Usage
